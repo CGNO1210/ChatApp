@@ -1,0 +1,80 @@
+{
+  "expo": {
+    "name": "chatapp",
+    "slug": "chatapp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "permissions": {
+        "camera": {
+          "allowsRecording": true,
+          "audio": true
+        }
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "ACCESS_WIFI_STATE",
+        "RECORD_AUDIO",
+        "INTERNET",
+        "ACCESS_NETWORK_STATE",
+        "CAMERA",
+        "BLUETOOTH",
+        "MODIFY_AUDIO_SETTINGS",
+        "WRITE_EXTERNAL_STORAGE",
+        "READ_PHONE_STATE",
+        "WAKE_LOCK",
+        "VIBRATE",
+        "MANAGE_DOCUMENTS",
+        "MEDIA_LYBRARY",
+        "NOTIFICATIONS",
+        "USER_FACING_NOTIFICATIONS"
+      ],
+      "proguard": {
+        "rules": [
+          "-keep class **.zego.** { *; }"
+        ]
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow $(PRODUCT_NAME) to access your photos.",
+          "savePhotosPermission": "Allow $(PRODUCT_NAME) to save photos.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ]
+    ]
+  }
+}
